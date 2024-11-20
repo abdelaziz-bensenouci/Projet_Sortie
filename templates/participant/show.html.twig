@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Participant{% endblock %}
+
+{% block body %}
+
+
+    <h1 class="h1">{{ participant.pseudo|capitalize }}</h1>
+<div class="mon_profil">
+    <div class="photo">
+        {% if participant.photo %}
+            <img src="{{ asset('img/' ~ participant.photo) }}" alt="Photo de profil" class="img-profil">
+        {% else %}
+            <img src="{{ asset('img/pp_defaut.png') }}" alt="Photo de profil" class="img-profil">
+        {% endif %}
+    </div>
+    <div class="info_profil">
+        <table class="table_mon_profil">
+            <tbody>
+            <tr>
+                <th>Prenom</th>
+                <td>{{ participant.prenom }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ participant.nom }}</td>
+            </tr>
+            <tr>
+                <th>Telephone</th>
+                <td>{{ participant.telephone }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ participant.email }}</td>
+            </tr>
+            <tr>
+                <th>Campus</th>
+                <td>{{ participant.campus.nom }}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+    <div class="btn_profil">
+        <a href="{{ path('app_sortie_accueil') }}" class="btn">Retour</a>
+        <a href="{{ path('app_participant_edit', {'id': participant.id}) }}" class="btn">Modifier profil</a>
+    </div>
+{% endblock %}

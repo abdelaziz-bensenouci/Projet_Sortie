@@ -1,0 +1,596 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    float: left;
+    margin-right: 20px;
+
+}
+
+img{
+    width: auto;
+    height: 100px;
+    margin-left: 0px;
+}
+
+body {
+    min-height: 100vh;
+    background-color: white;
+}
+nav {
+    height: 50px;
+    margin-top: 0;
+    text-align: right;
+    font-size: large;
+    padding: 25px;
+    background-color: #15233D;
+
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    margin-right: 10px;
+}
+
+nav a:hover {
+    color: lightblue;
+}
+
+main {
+    padding: 15px;
+}
+
+footer {
+
+    padding-top: 5px;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.produits-list {
+    margin: 0 auto;
+
+    padding: 15px;
+    border: solid;
+    color: black;
+
+}
+
+/*accueil ________________________________________________________________________________________________*/
+.filtres {
+    margin-top: 60px;
+}
+
+.recherche_container, .recherche_container2 {
+    display: flex;
+}
+
+.recherche_date {
+    display: flex;
+}
+
+.recherche_nom {
+    display: flex;
+    align-items: baseline;
+}
+
+#rechercher-button {
+    margin-left: 100px;
+    width: 200px;
+    height: 80px;
+}
+
+.label_checkbox input[type="checkbox"] {
+    margin-right: -50px;
+}
+
+#dateFin {
+    width: 170px;
+}
+
+#dateDebut {
+    width: 150px;
+}
+
+/* ville ________________________________________________________________________________________________ */
+.h1 {
+    text-align: center;
+    margin-top: 0;
+    padding-bottom: 20px;
+}
+
+.search-container {
+    display: flex;
+    align-items: baseline;
+}
+
+p {
+    margin-right: 10px;
+}
+
+fieldset {
+    width: 30%;
+}
+
+/*formulaire ________________________________________________________________________________________________*/
+.form-container {
+    text-align: left;
+}
+
+.form-container form {
+    text-align: left;
+    margin-left: 15px;
+}
+
+.form-container2 {
+    text-align: center;
+    margin-top: 0;
+    padding: 15px;
+    border: solid;
+}
+
+.form-container3 {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+
+.form-group {
+    display: flex;
+}
+
+label {
+    display: block;
+}
+
+input, textarea, select {
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    max-width: 50%;
+    width: 150px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 70%;
+}
+
+.table_profil {
+    margin-left: 30%;
+    border-collapse: collapse;
+    width: 40%;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* accueil ________________________________________________________________________________________________ */
+.date {
+    padding-right: 30px;
+    float: right;
+    font-weight: bold;
+}
+
+.user_connecté {
+    padding-right: 27px;
+    float: right;
+    font-weight: bold;
+}
+.btn {
+    margin-top: 5px;
+    margin-right: 35px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #154A80;
+    color: #fff; /* Couleur du texte */
+    text-decoration: none;
+    border: 1px solid #15233D;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+/*vue d un profil _____________________________________________________________________________________________________*/
+.mon_profil{
+    display: flex;
+    justify-content: center;
+    margin-right: 30%;
+}
+.photo{
+    display: flex;
+    margin-right: 30%;
+}
+
+.info_profil{
+    display: flex;
+    /*justify-content: center;*/
+    width: 32%;
+}
+
+.table_mon_profil {
+    width: 100%; /* Définissez la largeur totale du tableau */
+}
+
+.table_mon_profil td {
+    width: 450px; /* Définissez la largeur des cellules de données (ajustez selon vos besoins) */
+    text-align: center; /* Alignez le texte de la cellule à gauche */
+}
+
+.table_mon_profil th {
+    width: 250px; /* Définissez la largeur des cellules d'en-tête (ajustez selon vos besoins) */
+    text-align: left; /* Alignez le texte de l'en-tête à gauche */
+}
+
+.btn_profil {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* afficher une sortie ________________________________________________________________________________________________ */
+.p_style {
+    font-weight: bold;
+}
+
+.p_sortie {
+    display: flex;
+}
+
+.colonnes {
+
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.colonne2 {
+    flex: 1;
+}
+
+.participants {
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.tab_sortie {
+    width: 350px;
+}
+
+/*Login ________________________________________________________________________________________________ */
+.form-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 40em;
+}
+
+.form-sign {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.form-sign label {
+    width: 150px;
+    text-align: left;
+    margin-right: 10px;
+    padding-bottom: 15px;
+}
+
+.form-sign-input {
+    width: 100%;
+    max-width: 300px;
+}
+
+.form-grid {
+    margin-top: 25px;
+    display: grid;
+    grid-column-gap: 15px;
+    grid-row-gap: 8px;
+}
+
+.form-btn {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+}
+
+.form-btn button {
+    margin-right: 5px;
+}
+
+.form-check {
+    grid-area: 1/2;
+    display: flex;
+    align-items: center;
+}
+
+.form-check input {
+    margin-bottom: 0;
+    max-width: 25%;
+    width: 20px;
+}
+
+.form-check-label {
+    margin-left: 5px;
+}
+
+.forgot-password-link {
+    margin-left: 7px;
+    grid-area: 2/2;
+    text-decoration: none;
+}
+
+/*Editer profil ________________________________________________________________________________________________ */
+.form-edit {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-edit-grid {
+    margin-top: 4em;
+    display: grid;
+    gap: 10px;
+}
+
+.form-edit-field {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.form-edit-field label {
+    flex-basis: 40%;
+    text-align: left;
+    padding-right: 10em;
+    padding-bottom: 20px;
+}
+
+.form-edit-btn {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    margin: 2em;
+}
+
+.form-edit-field input[type="text"],
+.form-edit-field input[type="password"],
+.form-edit-field input[type="email"],
+.form-edit-field select{
+    width: 200px;
+}
+
+.form-edit-field input[type="file"] {
+    width: 9em;
+}
+
+.img-profil {
+    width: 100px;
+    height: 100px;
+}
+
+/*inscription par import __________________________________________________________________________________*/
+.import_csv{
+    display: flex;
+}
+.btn_import{
+    margin-left: 80%;
+}
+.form_fichiercsv{
+    margin-left: 33%;
+}
+
+.custom-file-input::before {
+    content: "";
+    color: #333;
+}
+.custom-file-input {
+    margin-top: 15px;
+    width: auto;
+    max-width: 450px;
+}
+.fieldset_import{
+    margin-top: 30px;
+    margin-left: 30%;
+}
+
+/*Flash ________________________________________________________________________________________________ */
+.flash {
+    padding: 20px;
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.flash-success {
+    background-color: rgba(69, 136, 2, 0.65);
+}
+
+.flash-warning {
+    background-color: rgba(252, 206, 23, 0.7);
+}
+
+.flash-danger {
+    background-color: rgba(215, 3, 3, 0.78);
+}
+
+.text-danger, .alert {
+    color: #e81414;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+/*creer sortie______________________________________________________________________________*/
+.h1_creerSortie {
+    text-align: center;
+}
+
+.form-container-creerSortie {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.column-creerSortie2 {
+    margin-left: 10px;
+}
+
+.creation_sortie {
+    display: flex;
+}
+.creation_sortie label {
+    padding-right: 10px;
+    width: 150px; /* Définissez la largeur du label (ajustez selon vos besoins) */
+    text-align: right; /* Alignez le texte du label à droite */
+    margin-right: 5px;
+}
+
+
+.btn_creersortie2 {
+    margin-right: 20px;
+    padding: 10px 20px;
+    background-color: #154A80;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #15233D;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.btn_creersortie2:hover {
+    background-color: #0056b3;
+}
+
+.btn_creersortie {
+    display: flex;
+    justify-content: center;
+    margin-left: 30px;
+}
+
+.btn_supprimer_sortie {
+    display: flex;
+    justify-content: center;
+    margin-left: 30px;
+}
+
+.btn_supprimer_sortie2 {
+    margin-right: 20px;
+    padding: 10px 20px;
+    background-color: #c20e0e;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.btn_supprimer_sortie2:hover {
+    background-color: red;
+}
+
+#ajout_lieu_button{
+    font-size: 30px;
+    margin-left: 30px;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50px;
+}
+
+.btn_lieu {
+    display: flex;
+}
+
+#location-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: whitesmoke;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 0px #000000;
+    z-index: 9999;
+}
+
+/* Annulation sortie______________________________________________________________________________*/
+.motif-container {
+    text-align: center;
+    width: 500px;
+    margin-bottom: 20px;
+    margin-left: 25%;
+}
+
+/* Style pour le champ "motifAnnulation" */
+.motif-container textarea {
+    display: block;
+    width: 500px;
+    height: 100px;
+    resize: none;
+}
+
+.motif-container label {
+    text-align: left;
+}
+
+.table-container {
+    display: flex;
+    justify-content: center;
+}
+
+.table_annulation {
+    border-collapse: collapse;
+    width: 25%;
+}
+
+/* médias queries  (responsive)______________________________________________________________________________*/
+@media screen and (max-width: 767px) {
+    .btn_creersortie2 {
+        display: none;
+    }
+
+    .recherche_container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+}
+
+@media screen and (max-width: 1142px) {
+    .recherche_container2 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .table {
+        width: 100%;
+    }
+}
+
+

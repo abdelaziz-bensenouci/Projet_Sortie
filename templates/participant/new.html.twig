@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouveau participant{% endblock %}
+
+{% block body %}
+    <div class="form-edit">
+        <div class="btn_import">
+            <a href="{{ path('admin_import_users') }}" class="btn">Ajout par import csv</a>
+        </div>
+        <h1>Créer un nouveau participant</h1>
+        {{ include('participant/_form.html.twig') }}
+    </div>
+{% endblock %}

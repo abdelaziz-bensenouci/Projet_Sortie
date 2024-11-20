@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouvelle Ville{% endblock %}
+
+{% block body %}
+    <fieldset class="fieldset">
+    <legend><h1>Ajouter une Ville</h1></legend>
+
+    {{ include('ville/_form.html.twig') }}
+    </fieldset>
+<br>
+    <a href="{{ path('app_ville_index') }}" class="btn">Retour a la liste</a>
+{% endblock %}

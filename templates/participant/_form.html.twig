@@ -1,0 +1,48 @@
+{{ form_start(form) }}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <div class="form-edit-grid">
+        <div class="form-edit-field">
+            {{ form_label(form.pseudo, 'Pseudo') }}
+            {{ form_widget(form.pseudo) }}
+        </div>
+        <div class="form-edit-field">
+            {{ form_label(form.prenom, 'Prénom') }}
+            {{ form_widget(form.prenom) }}
+        </div>
+        <div class="form-edit-field">
+            {{ form_label(form.nom, 'Nom') }}
+            {{ form_widget(form.nom) }}
+        </div>
+        <div class="form-edit-field">
+            {{ form_label(form.telephone, 'Téléphone') }}
+            {{ form_widget(form.telephone) }}
+        </div>
+        <div class="form-edit-field">
+            {{ form_label(form.email, 'Adresse Mail') }}
+            {{ form_widget(form.email) }}
+        </div>
+        <div class="form-edit-field">
+            {{ form_label(form.password.first, 'Mot de passe') }}
+            {{ form_widget(form.password.first) }}
+        </div>
+        <span id="password-match-error" class="text-danger"></span>
+        <div class="form-edit-field">
+            {{ form_label(form.password.second, 'Confirmez le mot de passe') }}
+            {{ form_widget(form.password.second) }}
+        </div>
+        <div class="form-edit-field">
+            {{ form_label(form.campus, 'Campus') }}
+            {{ form_widget(form.campus) }}
+        </div>
+        <div class="form-edit-field">
+            {{ form_label(form.photo, 'Photo de profil') }}
+            {{ form_widget(form.photo) }}
+        </div>
+    </div>
+    <div class="form-edit-btn">
+        <button class="btn">{{ button_label|default('Enregistrer') }}</button>
+        <a href="{{ path('app_sortie_accueil')}}" class="btn">Annuler</a>
+
+    </div>
+<script src="{{ asset('assets/flash_err_mdp.js') }}"></script>
+{{ form_end(form) }}

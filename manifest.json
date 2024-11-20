@@ -1,0 +1,32 @@
+{
+  "name": "P.S",
+  "short_name": "P.S",
+  "theme_color": "#2196f3",
+  "background_color": "#2196f3",
+  "display": "standalone",
+  "scope": ".",
+  "start_url": ".",
+  "description": "Projet 2  ENI",
+  "icons": [
+    {
+      "src": "./public/img/icons/symfony.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./public/img/icons/symfony.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "./public/img/icons/symfony.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "./public/img/icons/symfony.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

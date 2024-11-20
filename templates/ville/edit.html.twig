@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier Ville{% endblock %}
+
+{% block body %}
+<fieldset class="fieldset">
+    <legend> <h1>Modifier Ville</h1></legend>
+            {{ include('ville/_form.html.twig', {'button_label': 'Mettre a jour'}) }}
+</fieldset>
+
+    <br>
+    <a href="{{ path('app_ville_index') }}" class="btn">Retour a la liste</a>
+
+
+{% endblock %}

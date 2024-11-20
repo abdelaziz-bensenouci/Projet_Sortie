@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1 class="h1_creerSortie">Annuler une sortie</h1>
+
+    <div class="table-container">
+        <table class="table_annulation">
+            <tbody>
+                <tr>
+                    <th>Nom de la sortie</th>
+                    <td>{{ sortie.nom }}</td>
+                </tr>
+                <tr>
+                    <th>Date de la sortie</th>
+                    <td>{{ sortie.dateHeureDebut ? sortie.dateHeureDebut|date('d/m/y H:i') : '' }}</td>
+                </tr>
+                <tr>
+                    <th>Campus</th>
+                    <td>{{ sortie.campusSorties.nom }}</td>
+                </tr>
+                <tr>
+                    <th>Lieu</th>
+                    <td>{{ sortie.lieu.nom }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="form-container3">
+        {{ form_start(form) }}
+
+        <div class="motif-container">
+            {{ form_label(form.motifAnnulation, 'Motif d\'annulation') }}
+            {{ form_widget(form.motifAnnulation) }}
+        </div>
+
+
+        <div class="btn_creersortie">
+            <a href="{{ path('app_sortie_accueil', {'id': sortie.id}) }}" class="btn">Retour accueil</a>
+            <button type="submit" class="btn">Annuler la sortie</button>
+        </div>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}
+
+{% block title %}
+
+{% endblock %}
+

@@ -1,0 +1,18 @@
+<nav>
+        {% if app.user %}
+
+                <a href="{{ path('app_sortie_accueil') }}" title="Accueil">Accueil</a>
+                <a href="{{ path('app_participant_show', {'id': app.user.id}) }}" title="Profil">Mon Profil</a>
+                <a href="{{ path('app_logout') }}" title="Deconnexion">Se déconnecter</a>
+        {% endif %}
+    <div>
+        {% if is_granted("ROLE_ADMIN") %}
+            ||
+            <a href="{{ path('app_ville_index') }}" title="Villes">Villes</a>
+            <a href="{{ path('app_campus_index') }}" title="Campus">Campus</a>
+            <a href="{{ path('app_participant_new') }}" title="Créer Participant">Créer un participant</a>
+            <a href="{{ path('app_participant_index') }}" title="Gérer Participants">Gérer les participants</a>
+            ||
+        {% endif %}
+    </div>
+</nav>

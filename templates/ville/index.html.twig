@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des villes{% endblock %}
+
+{% block body %}
+    <h1 class="h1">Gerer les villes</h1>
+    <h2>Filtrer les villes</h2>
+    <div class="search-container">
+        <p>Le nom contient: </p>
+        <form method="get" action="{{ path('app_ville_index') }}">
+            <input type="text" name="search" id="recherche" placeholder="Rechercher par nom" value="{{ app.request.query.get('search') }}">
+            <button type="submit">Rechercher </button>
+        </form>
+    </div>
+    <br>
+    <table>
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Code Postal</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for ville in villes %}
+            <tr>
+                <td>{{ ville.nom }}</td>
+                <td>{{ ville.codePostal }}</td>
+                <td>
+                    <a href="{{ path('app_ville_edit', {'id': ville.id}) }}">Modifier</a> -
+                    <a href="{{ path('app_ville_delete', {'id': ville.id}) }}">Supprimer</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table> <br>
+
+    <a href="{{ path('app_ville_new') }}" class="btn">Ajouter une ville</a>
+{% endblock %}

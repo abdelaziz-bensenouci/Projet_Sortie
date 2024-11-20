@@ -1,0 +1,80 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modification d'une Sortie{% endblock %}
+
+{% block body %}
+    <h1 class="h1_creerSortie">Modifier une sortie</h1>
+
+    {{ form_start(form) }}
+
+    <div class="form-container-creerSortie">
+        <div class="column-creerSortie">
+            {{ form_start(form) }}
+
+            <div class="creation_sortie">
+                {{ form_label(form.nom) }}
+                {{ form_widget(form.nom) }}
+            </div>
+            <div class="creation_sortie">
+                {{ form_label(form.dateHeureDebut) }}
+                {{ form_widget(form.dateHeureDebut) }}
+            </div>
+            <div class="creation_sortie">
+                {{ form_label(form.dateLimiteInscription) }}
+                {{ form_widget(form.dateLimiteInscription) }}
+            </div>
+            <div class="creation_sortie">
+                {{ form_label(form.nbInscriptionsMax) }}
+                {{ form_widget(form.nbInscriptionsMax) }}
+            </div>
+            <div class="creation_sortie">
+                {{ form_label(form.duree) }}
+                {{ form_widget(form.duree) }}
+            </div>
+            <div class="creation_sortie">
+                {{ form_label(form.infosSortie) }}
+                {{ form_widget(form.infosSortie) }}
+            </div>
+        </div>
+
+        <div class="column-creerSortie2">
+            <div class="creation_sortie">
+                {{ form_label(form.ville) }}
+                {{ form_widget(form.ville) }}
+            </div>
+            <div class="creation_sortie">
+                {{ form_label(form.lieu) }}
+                {{ form_widget(form.lieu) }}
+            </div>
+            <div class="creation_sortie">
+                {{ form_label(form.rue) }}
+                {{ form_widget(form.rue) }}
+            </div>
+            <div class="creation_sortie">
+                {{ form_label(form.codePostal) }}
+                {{ form_widget(form.codePostal) }}
+            </div>
+            <div class="creation_sortie">
+                {{ form_label(form.longitude) }}
+                {{ form_widget(form.longitude) }}
+            </div>
+            <div class="creation_sortie">
+                {{ form_label(form.latitude) }}
+                {{ form_widget(form.latitude) }}
+            </div>
+        </div>
+    </div>
+
+    <div class="btn_creersortie">
+        <button class="btn_creersortie2">{{ button_label|default('Enregistrer') }}</button>
+        {{ form_end(form) }}
+
+        <a href="{{ path('app_sortie_accueil') }}" class="btn_creersortie2">Accueil</a>
+    </div>
+
+        <div class="btn_supprimer_sortie">
+            {{ include('sortie/supprimer_sortie.html.twig') }}
+        </div>
+
+    <script src="{{ asset('assets/autocomplete_lieu.js') }}"></script>
+{% endblock %}

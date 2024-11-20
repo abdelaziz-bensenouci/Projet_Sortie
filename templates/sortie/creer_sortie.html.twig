@@ -1,0 +1,86 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Création de Sortie{% endblock %}
+
+{% block body %}
+    <h1 class="h1_creerSortie">Créer une nouvelle Sortie</h1>
+
+    <div class="form-container-creerSortie">
+        <div class="column-creerSortie">
+            {{ form_start(form) }}
+            <div class="creation_sortie">
+                {{ form_label(form.nom) }}
+                {{ form_widget(form.nom) }}
+            </div>
+            <div class="creation_sortie">
+                {{ form_label(form.dateHeureDebut) }}
+                {{ form_widget(form.dateHeureDebut) }}
+            </div>
+            <div class="creation_sortie">
+                {{ form_label(form.dateLimiteInscription) }}
+                {{ form_widget(form.dateLimiteInscription) }}
+            </div>
+            <div class="creation_sortie">
+                {{ form_label(form.nbInscriptionsMax) }}
+                {{ form_widget(form.nbInscriptionsMax) }}
+            </div>
+            <div class="creation_sortie">
+                {{ form_label(form.duree) }}
+                {{ form_widget(form.duree) }}
+            </div>
+            <div class="creation_sortie">
+                {{ form_label(form.infosSortie) }}
+                {{ form_widget(form.infosSortie) }}
+            </div>
+        </div>
+        <div class="column-creerSortie2">
+            <div class="creation_sortie">
+                <label>Campus: </label>
+                {{ participant.campus.nom }}
+            </div>
+            <div class="creation_sortie">
+                {{ form_label(form.ville) }}
+                {{ form_widget(form.ville) }}
+            </div>
+            <div class="creation_sortie">
+                {{ form_label(form.lieu) }}
+                {{ form_widget(form.lieu) }}
+                <button type="button" id="ajout_lieu_button">+</button>
+            </div>
+            <div class="creation_sortie">
+                {{ form_label(form.rue) }}
+                {{ form_widget(form.rue) }}
+            </div>
+            <div class="creation_sortie">
+                {{ form_label(form.codePostal) }}
+                {{ form_widget(form.codePostal) }}
+            </div>
+            <div class="creation_sortie">
+                {{ form_label(form.longitude) }}
+                {{ form_widget(form.longitude) }}
+            </div>
+            <div class="creation_sortie">
+                {{ form_label(form.latitude) }}
+                {{ form_widget(form.latitude) }}
+            </div>
+        </div>
+    </div>
+    <div class="btn_creersortie">
+        <button type="submit" name="action" value="enregistrer" class="btn_creersortie2">Enregistrer</button>
+        <button type="submit" name="action" value="publier" class="btn_creersortie2">Publier la sortie</button>
+        <a href="{{ path('app_sortie_accueil') }}" class="btn_creersortie2">Annuler</a>
+    </div>
+    {{ form_end(form) }}
+
+    <<div id="location-popup" style="display: none;">
+    <div id="popup-content">
+        {{ form_start(lieuForm, {'attr': {'id': 'lieu-form'}}) }}
+        {{ form_widget(lieuForm) }}
+        <button type="submit" class="btn">Créer Lieu</button>
+        <button id="close-popup-button" class="btn">Fermer</button>
+        {{ form_end(lieuForm) }}
+    </div>
+</div>
+    <script src="{{ asset('assets/autocomplete_lieu.js') }}"></script>
+    <script src="{{ asset('assets/ajout_lieu_popup.js') }}"></script>
+{% endblock %}

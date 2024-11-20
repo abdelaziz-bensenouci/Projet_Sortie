@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang=fr>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=yes, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>{% block title %}Sortie {% endblock %}</title>
+
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.png') }}">
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <link rel="manifest" href="/ProjetSortie/manifest.json">
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="{{ asset('img/eni-group-header2.png') }}" alt="Logo"/>
+            </div>
+            {% include('inc/nav.html.twig') %}
+
+        </header>
+
+        {% for label, messages in app.flashes %}
+            {% for message in messages %}
+                <div class="flash flash-{{ label }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endfor %}
+        <main>
+            {% block body %} {% endblock %}
+
+        </main>
+
+    </body>
+    <footer>
+        <div>&copy; {{ "now"|date("Y") }} Justine, Gregory, Abdelaziz</div>
+    </footer>
+</html>
+

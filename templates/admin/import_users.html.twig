@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<fieldset class="fieldset_import">
+    <legend><h1 class="h1">Inscription par fichier CSV</h1></legend>
+    <div class="form_fichiercsv">
+        {{ form_start(form) }}
+        <div class="form_fichiercsv2">
+            {{ form_row(form.csvFile, {'attr': {'class': 'custom-file-input'}}) }}
+        </div>
+        {{ form_end(form) }}
+    </div>
+</fieldset>
+{% endblock %}

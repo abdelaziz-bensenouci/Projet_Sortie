@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Campus{% endblock %}
+
+{% block body %}
+    <h1 class="h1">Gerer les campus </h1>
+    <h2>Filtrer les sites</h2>
+    <div class="search-container">
+        <p>Le nom contient: </p>
+        <form method="get" action="{{ path('app_campus_index') }}">
+            <input type="text" name="search" id="recherche" placeholder="Rechercher par nom" value="{{ app.request.query.get('search') }}">
+            <button type="submit">Rechercher</button>
+        </form>
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Actions </th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for campus in campus %}
+            <tr>
+                <td>{{ campus.nom }}</td>
+                <td>
+                    <a href="{{ path('app_campus_edit', {'id': campus.id}) }}">Modifier</a> -
+                    <a href="{{ path('app_campus_delete', {'id': campus.id}) }}">Supprimer</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">Pas de ville trouvée</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table> <br>
+
+    <a href="{{ path('app_campus_new') }}" class="btn">Ajouter un campus</a>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Campus{% endblock %}
+
+{% block body %}
+    <fieldset class="fieldset">
+    <legend><h1>Modifier Campus</h1></legend>
+
+    {{ include('campus/_form.html.twig', {'button_label': 'Mettre à jour'}) }}<br>
+    </fieldset>
+<br>
+    <a href="{{ path('app_campus_index') }}" class="btn">Retour a la liste</a>
+{% endblock %}

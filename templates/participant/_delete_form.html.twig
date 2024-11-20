@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Confirmer la suppression{% endblock %}
+
+{% block body %}
+    <h1>Confirmer la suppression</h1>
+    <p>Êtes-vous sûr de vouloir supprimer le participant "{{ participant.pseudo }}" ?</p>
+
+    <form method="post" action="{{ path('app_participant_delete', {'id': participant.id}) }}">
+        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ participant.id) }}">
+        <button type="submit" class="btn">Confirmer la suppression</button>
+    </form>
+
+    <a href="{{ path('app_participant_index') }}" class="btn">Annuler</a>
+{% endblock %}
